@@ -1,9 +1,11 @@
 # coding=utf-8
-from celery.task import task as base_task, Task
+# from celery.task import task as base_task, Task
 import djcelery_transactions.transaction_signals
 from django.db import transaction
 from functools import partial
 import threading
+
+from celery import Task
 
 
 # Thread-local data (task queue).
